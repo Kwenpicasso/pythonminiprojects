@@ -6,7 +6,8 @@ while True:
     if value.lower() == 'quit':
         print("Goodbye")
         break
-    letter = list(value)
-    random.shuffle(letter)
-    print(f"scrambled: {''.join(letter)}")
+    else :
+        letter = list(value)
+        random.shuffle(letter)
+        print(f"scrambled: {''.join(letter)}")
         
