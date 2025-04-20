@@ -1,7 +1,5 @@
 
 tasks = []
-
-
 def display_header():
     print("1. Add task")
     print("2. View tasks")
@@ -12,8 +10,8 @@ def display_header():
 
 def add_task():
     title = input("Enter task title:")
-    new_task = tasks.append({'title': title, 'completed': False})
-    print(f"Task {new_task} has been added succesfully")
+    tasks.append({'title': title, 'completed': False})
+    print(f"Task {title} has been added succesfully")
 
 
 def view_task():
@@ -37,7 +35,7 @@ def complete_task():
             tasks[value]['completed'] = True
             print("Task marked as completed.")
     except ValueError:
-       print("Please enter a valid number.")
+        print("Please enter a valid number.")
 
 
 def delete_task():
@@ -47,7 +45,7 @@ def delete_task():
         if value < 0 or value >= len(tasks):
             print("Invalid task number.")
         else:
-            deleted =tasks.pop(value) 
+            deleted = tasks.pop(value)
             print(f"{deleted['title']} deleted")
     except ValueError:
         print("Please enter a valid number.")
